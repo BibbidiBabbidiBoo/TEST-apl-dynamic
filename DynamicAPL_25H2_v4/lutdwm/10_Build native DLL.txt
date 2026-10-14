@@ -1,0 +1,330 @@
+﻿2026-10-14T16:31:08.0978861Z ##[group]Run msbuild lutdwm.sln /m `
+2026-10-14T16:31:08.0979325Z [36;1mmsbuild lutdwm.sln /m `[0m
+2026-10-14T16:31:08.0979617Z [36;1m  /p:Configuration=Release `[0m
+2026-10-14T16:31:08.0979895Z [36;1m  /p:Platform=x64 `[0m
+2026-10-14T16:31:08.0980201Z [36;1m  /p:VcpkgRoot="$env:VCPKG_INSTALLATION_ROOT/" `[0m
+2026-10-14T16:31:08.0980624Z [36;1m  /p:OutDir="$env:GITHUB_WORKSPACE/DynamicAPL_25H2_v4/build/native/"[0m
+2026-10-14T16:31:08.0981049Z [36;1mif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }[0m
+2026-10-14T16:31:08.1021021Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-14T16:31:08.1021396Z env:
+2026-10-14T16:31:08.1021679Z   NUGET: C:\hostedtoolcache\windows\nuget.exe\7.9.0\x64/nuget.exe
+2026-10-14T16:31:08.1022021Z ##[endgroup]
+2026-10-14T16:31:08.4261800Z MSBuild version 17.14.60+43b635718 for .NET Framework
+2026-10-14T16:31:08.4723362Z Build started 10/14/2026 4:31:08 PM.
+2026-10-14T16:31:08.4727097Z 
+2026-10-14T16:31:08.7263828Z      1>Project "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm.sln" on node 1 (default targets).
+2026-10-14T16:31:08.7264888Z      1>ValidateSolutionConfiguration:
+2026-10-14T16:31:08.7265402Z          Building solution configuration "Release|x64".
+2026-10-14T16:31:08.9702904Z      1>Project "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm.sln" (1) is building "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj" (2) on node 1 (default targets).
+2026-10-14T16:31:08.9704221Z      2>PrepareForBuild:
+2026-10-14T16:31:08.9704562Z          Creating directory "x64\Release\".
+2026-10-14T16:31:09.0271796Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-14T16:31:09.0273276Z          Creating directory "D:\a\TEST-apl-dynamic\TEST-apl-dynamic/DynamicAPL_25H2_v4/build/native/".
+2026-10-14T16:31:09.0275656Z          Creating directory "x64\Release\lutdwm.tlog\".
+2026-10-14T16:31:09.0363928Z        InitializeBuildStatus:
+2026-10-14T16:31:09.0364591Z          Creating "x64\Release\lutdwm.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-14T16:31:09.0365130Z          Touching "x64\Release\lutdwm.tlog\unsuccessfulbuild".
+2026-10-14T16:31:09.3838762Z        ComputeStdModulesCompileInputs:
+2026-10-14T16:31:09.3839669Z          Reading library manifest file 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\modules\modules.json' which provides data for library 'microsoft/STL'.
+2026-10-14T16:31:09.3841431Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\modules\std.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-14T16:31:09.3843078Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\modules\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-14T16:31:09.4123555Z        MakeDirsForCl:
+2026-10-14T16:31:09.4124208Z          Creating directory "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\x64\Release\microsoft\STL".
+2026-10-14T16:31:09.4126670Z        SetModuleDependencies:
+2026-10-14T16:31:09.4127164Z          Creating directory "x64\Release\lutdwm_MD.tlog\".
+2026-10-14T16:31:09.4738673Z        VcpkgTripletSelection:
+2026-10-14T16:31:09.4739546Z          Using triplet "x64-windows-static" from "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\vcpkg_installed\x64-windows-static\x64-windows-static\"
+2026-10-14T16:31:09.4740258Z          Using normalized configuration "Release"
+2026-10-14T16:31:09.4746255Z        VcpkgBootstrap:
+2026-10-14T16:31:09.4747029Z        Skipping target "VcpkgBootstrap" because all output files are up-to-date with respect to the input files.
+2026-10-14T16:31:22.0720618Z      2>Project "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj" (2) is building "C:\vcpkg\scripts\buildsystems\msbuild\support\InstallImplementation.targets" (3) on node 1 (VcpkgInstallImplementation target(s)).
+2026-10-14T16:31:22.0725116Z      3>VcpkgInstallImplementation:
+2026-10-14T16:31:22.0726096Z          Installing vcpkg dependencies to D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\vcpkg_installed\x64-windows-static\
+2026-10-14T16:31:22.3141185Z          "C:\vcpkg/\vcpkg.exe" install  --x-wait-for-lock --triplet "x64-windows-static" --vcpkg-root "C:\vcpkg/\\" "--x-manifest-root=D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\\" "--x-install-root=D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\vcpkg_installed\x64-windows-static\\" 
+2026-10-14T16:31:22.3275912Z          "C:\vcpkg/\vcpkg.exe" install  --x-wait-for-lock --triplet "x64-windows-static" --vcpkg-root "C:\vcpkg/\\" "--x-manifest-root=D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\\" "--x-install-root=D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\vcpkg_installed\x64-windows-static\\" 
+2026-10-14T16:31:22.6156866Z          Detecting compiler hash for triplet x64-windows...
+2026-10-14T16:31:24.6708387Z          Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+2026-10-14T16:31:24.6792431Z          Detecting compiler hash for triplet x64-windows-static...
+2026-10-14T16:31:25.2907035Z          Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+2026-10-14T16:31:25.2912535Z          The following packages will be built and installed:
+2026-10-14T16:31:25.2913048Z              minhook:x64-windows-static@1.3.4
+2026-10-14T16:31:25.2913511Z            * vcpkg-cmake:x64-windows@2025-08-07
+2026-10-14T16:31:25.2913987Z            * vcpkg-cmake-config:x64-windows@2026-07-21
+2026-10-14T16:31:25.2914650Z          Additional packages (*) will be modified to complete this operation.
+2026-10-14T16:31:25.4079482Z          Restored 3 package(s) from C:\Users\runneradmin\AppData\Local\vcpkg\archives in 75.6 ms. Use --debug to see more details.
+2026-10-14T16:31:25.4080216Z          Installing 1/3 vcpkg-cmake-config:x64-windows@2026-07-21...
+2026-10-14T16:31:25.4080856Z          vcpkg-cmake-config:x64-windows@2026-07-21 package ABI: 5ec285f9207ce07390c22b53883a83e61e502ba896e6463bf0bc2d5d8fb750ef
+2026-10-14T16:31:25.4106577Z          Elapsed time to handle vcpkg-cmake-config:x64-windows: 2.79 ms
+2026-10-14T16:31:25.4107091Z          Installing 2/3 vcpkg-cmake:x64-windows@2025-08-07...
+2026-10-14T16:31:25.4107708Z          vcpkg-cmake:x64-windows@2025-08-07 package ABI: f428af3960f2ea145544afeb9d418b2de033be3a9ba1be38159cbd6fc2523258
+2026-10-14T16:31:25.4135702Z          Elapsed time to handle vcpkg-cmake:x64-windows: 2.87 ms
+2026-10-14T16:31:25.4136744Z          Installing 3/3 minhook:x64-windows-static@1.3.4...
+2026-10-14T16:31:25.4137697Z          minhook:x64-windows-static@1.3.4 package ABI: 5ef0ffcb2ef4dab2c0230f3d612f60d0cd76a30b89d9d1f7eea4b4f968b86139
+2026-10-14T16:31:25.4180975Z          Elapsed time to handle minhook:x64-windows-static: 4.51 ms
+2026-10-14T16:31:25.4187284Z          Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+2026-10-14T16:31:25.4188054Z          Packages installed in this vcpkg installation declare the following licenses:
+2026-10-14T16:31:25.4188844Z          BSD-2-Clause
+2026-10-14T16:31:25.4189236Z          MIT
+2026-10-14T16:31:25.4189587Z          minhook provides CMake targets:
+2026-10-14T16:31:25.4189933Z          
+2026-10-14T16:31:25.4190191Z            # this is heuristically generated, and may not be correct
+2026-10-14T16:31:25.4190545Z            find_package(minhook CONFIG REQUIRED)
+2026-10-14T16:31:25.4191183Z            target_link_libraries(main PRIVATE minhook::minhook)
+2026-10-14T16:31:25.4192235Z          
+2026-10-14T16:31:25.4193568Z          All requested installations completed successfully in: 11 ms
+2026-10-14T16:31:25.4325343Z          Creating "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\vcpkg_installed\x64-windows-static\.msbuildstamp-x64-windows-static.stamp" because "AlwaysCreate" was specified.
+2026-10-14T16:31:25.4327418Z          Touching "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\vcpkg_installed\x64-windows-static\.msbuildstamp-x64-windows-static.stamp".
+2026-10-14T16:31:25.4330178Z      3>Done Building Project "C:\vcpkg\scripts\buildsystems\msbuild\support\InstallImplementation.targets" (VcpkgInstallImplementation target(s)).
+2026-10-14T16:31:25.4954982Z      2>ClCompile:
+2026-10-14T16:31:25.4958700Z          C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX86\x64\CL.exe /c /I"D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\vcpkg_installed\x64-windows-static\x64-windows-static\include" /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /GL /D NDEBUG /D LUTDWM_EXPORTS /D _WINDOWS /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++latest /permissive- /Yc"pch.h" /Fp"x64\Release\dwm_lut.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:queue pch.cpp
+2026-10-14T16:31:25.9680135Z          pch.cpp
+2026-10-14T16:31:28.9230465Z          C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\bin\HostX86\x64\CL.exe /c /I"D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\vcpkg_installed\x64-windows-static\x64-windows-static\include" /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /GL /D NDEBUG /D LUTDWM_EXPORTS /D _WINDOWS /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _CRT_SECURE_NO_WARNINGS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++latest /permissive- /Yu"pch.h" /Fp"x64\Release\dwm_lut.pch" /Fo"x64\Release\\" /Fd"x64\Release\vc143.pdb" /external:W3 /Gd /TP /FC /errorReport:queue D3D11AplProbe.cpp dllmain.cpp
+2026-10-14T16:31:28.9636673Z          D3D11AplProbe.cpp
+2026-10-14T16:31:30.2447801Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,33): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2462465Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2463181Z          
+2026-10-14T16:31:30.2464618Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,33): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2466223Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2468381Z          
+2026-10-14T16:31:30.2469802Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,17): error C2737: 'cutoffNits': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2471412Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2471847Z          
+2026-10-14T16:31:30.2473102Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2474471Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2474909Z          
+2026-10-14T16:31:30.2476033Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2477346Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2478029Z          
+2026-10-14T16:31:30.2479261Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,24): error C2737: 'sy': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2480683Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2481118Z          
+2026-10-14T16:31:30.2482326Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2483741Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2484277Z          
+2026-10-14T16:31:30.2485385Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2486686Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2487080Z          
+2026-10-14T16:31:30.2488263Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,24): error C2737: 'sx': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2489677Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2490143Z          
+2026-10-14T16:31:30.2491415Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2492922Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2493399Z          
+2026-10-14T16:31:30.2494542Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2495849Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2496296Z          
+2026-10-14T16:31:30.2497620Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,21): error C2737: 'yNits': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2499143Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2499572Z          
+2026-10-14T16:31:30.2500823Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,50): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2503265Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2503724Z          
+2026-10-14T16:31:30.2505440Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,76): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2506928Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2507396Z          
+2026-10-14T16:31:30.2508768Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,21): error C2737: 'alpha': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2510325Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2510792Z          
+2026-10-14T16:31:30.2512098Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,39): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2513865Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2514302Z          
+2026-10-14T16:31:30.2515851Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,19): error C2672: 'std::clamp': no matching overloaded function found [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2517190Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2517999Z              C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\include\algorithm(10958,33):
+2026-10-14T16:31:30.2518915Z              could be 'const _Ty &std::clamp(const _Ty &,const _Ty &,const _Ty &)'
+2026-10-14T16:31:30.2520006Z                  D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,19):
+2026-10-14T16:31:30.2521169Z                  'const _Ty &std::clamp(const _Ty &,const _Ty &,const _Ty &)': expects 3 arguments - 1 provided
+2026-10-14T16:31:30.2522307Z              C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\include\algorithm(10930,33):
+2026-10-14T16:31:30.2523268Z              or       'const _Ty &std::clamp(const _Ty &,const _Ty &,const _Ty &,_Pr)'
+2026-10-14T16:31:30.2524137Z                  D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,19):
+2026-10-14T16:31:30.2525179Z                  'const _Ty &std::clamp(const _Ty &,const _Ty &,const _Ty &,_Pr)': expects 4 arguments - 1 provided
+2026-10-14T16:31:30.2525885Z          
+2026-10-14T16:31:30.2527645Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,64): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2528978Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2529376Z          
+2026-10-14T16:31:30.2530417Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,64): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2532066Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2533331Z          
+2026-10-14T16:31:30.2534487Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,83): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:30.2535319Z          (compiling source file '/D3D11AplProbe.cpp')
+2026-10-14T16:31:30.2535605Z          
+2026-10-14T16:31:31.0944536Z          dllmain.cpp
+2026-10-14T16:31:31.2479569Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,33): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2481575Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2483048Z          
+2026-10-14T16:31:31.2485120Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,33): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2486726Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2487105Z          
+2026-10-14T16:31:31.2488086Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,17): error C2737: 'cutoffNits': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2488998Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2489269Z          
+2026-10-14T16:31:31.2490049Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2492090Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2492370Z          
+2026-10-14T16:31:31.2493063Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2493824Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2494085Z          
+2026-10-14T16:31:31.2496185Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,24): error C2737: 'sy': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2498093Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2498580Z          
+2026-10-14T16:31:31.2501199Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2502680Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2503116Z          
+2026-10-14T16:31:31.2504304Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2505606Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2506039Z          
+2026-10-14T16:31:31.2507318Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,24): error C2737: 'sx': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2508781Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2509212Z          
+2026-10-14T16:31:31.2510490Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2511932Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2512425Z          
+2026-10-14T16:31:31.2513580Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2514932Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2515365Z          
+2026-10-14T16:31:31.2516677Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,21): error C2737: 'yNits': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2518391Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2518823Z          
+2026-10-14T16:31:31.2520122Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,50): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2521573Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2521999Z          
+2026-10-14T16:31:31.2523177Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,76): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2524518Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2524943Z          
+2026-10-14T16:31:31.2526228Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,21): error C2737: 'alpha': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2527736Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2528144Z          
+2026-10-14T16:31:31.2529377Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,39): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2530729Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2531126Z          
+2026-10-14T16:31:31.2532489Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,19): error C2672: 'std::clamp': no matching overloaded function found [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2534730Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2535302Z              C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\include\algorithm(10958,33):
+2026-10-14T16:31:31.2535914Z              could be 'const _Ty &std::clamp(const _Ty &,const _Ty &,const _Ty &)'
+2026-10-14T16:31:31.2536518Z                  D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,19):
+2026-10-14T16:31:31.2537155Z                  'const _Ty &std::clamp(const _Ty &,const _Ty &,const _Ty &)': expects 3 arguments - 1 provided
+2026-10-14T16:31:31.2537823Z              C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\include\algorithm(10930,33):
+2026-10-14T16:31:31.2538415Z              or       'const _Ty &std::clamp(const _Ty &,const _Ty &,const _Ty &,_Pr)'
+2026-10-14T16:31:31.2538939Z                  D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,19):
+2026-10-14T16:31:31.2539534Z                  'const _Ty &std::clamp(const _Ty &,const _Ty &,const _Ty &,_Pr)': expects 4 arguments - 1 provided
+2026-10-14T16:31:31.2539940Z          
+2026-10-14T16:31:31.2540688Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,64): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2541517Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2541779Z          
+2026-10-14T16:31:31.2542462Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,64): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2543271Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2543528Z          
+2026-10-14T16:31:31.2544204Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,83): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:31.2545165Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:31.2545432Z          
+2026-10-14T16:31:32.0460743Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(511,14): warning C4244: 'initializing': conversion from 'UINT' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0462467Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0462894Z          
+2026-10-14T16:31:32.0464058Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(512,15): warning C4244: 'initializing': conversion from 'UINT' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0465129Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0465492Z          
+2026-10-14T16:31:32.0466336Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(524,28): warning C4244: '=': conversion from 'UINT' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0467994Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0468492Z          
+2026-10-14T16:31:32.0470661Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(525,29): warning C4244: '=': conversion from 'UINT' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0472036Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0472368Z          
+2026-10-14T16:31:32.0473223Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(588,20): warning C4018: '<': signed/unsigned mismatch [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0474142Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0538453Z          
+2026-10-14T16:31:32.0539807Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(590,21): warning C4018: '<': signed/unsigned mismatch [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0541022Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0541396Z          
+2026-10-14T16:31:32.0542485Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(592,22): warning C4018: '<': signed/unsigned mismatch [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0543705Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0544059Z          
+2026-10-14T16:31:32.0566381Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1044,45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0567444Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0567736Z          
+2026-10-14T16:31:32.0601990Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1190,58): warning C4244: 'initializing': conversion from 'UINT' to 'FLOAT', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0603698Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0604141Z          
+2026-10-14T16:31:32.0605652Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1190,80): warning C4244: 'initializing': conversion from 'UINT' to 'FLOAT', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0607338Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0608212Z          
+2026-10-14T16:31:32.0672385Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1421,72): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0673565Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0673850Z          
+2026-10-14T16:31:32.0674708Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1473,85): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0675619Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0675879Z          
+2026-10-14T16:31:32.0679271Z      2>D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1528,63): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.0680663Z          (compiling source file '/dllmain.cpp')
+2026-10-14T16:31:32.0680940Z          
+2026-10-14T16:31:32.1088470Z      2>Done Building Project "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj" (default targets) -- FAILED.
+2026-10-14T16:31:32.1194164Z      1>Done Building Project "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm.sln" (default targets) -- FAILED.
+2026-10-14T16:31:32.1215218Z 
+2026-10-14T16:31:32.1215415Z Build FAILED.
+2026-10-14T16:31:32.1219522Z 
+2026-10-14T16:31:32.1220377Z        "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm.sln" (default target) (1) ->
+2026-10-14T16:31:32.1221579Z        "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj" (default target) (2) ->
+2026-10-14T16:31:32.1222365Z        (ClCompile target) -> 
+2026-10-14T16:31:32.1223326Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(511,14): warning C4244: 'initializing': conversion from 'UINT' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1225010Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(512,15): warning C4244: 'initializing': conversion from 'UINT' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1226510Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(524,28): warning C4244: '=': conversion from 'UINT' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1227964Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(525,29): warning C4244: '=': conversion from 'UINT' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1229329Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(588,20): warning C4018: '<': signed/unsigned mismatch [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1230592Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(590,21): warning C4018: '<': signed/unsigned mismatch [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1231836Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(592,22): warning C4018: '<': signed/unsigned mismatch [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1233183Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1044,45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1234933Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1190,58): warning C4244: 'initializing': conversion from 'UINT' to 'FLOAT', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1236438Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1190,80): warning C4244: 'initializing': conversion from 'UINT' to 'FLOAT', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1237923Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1421,72): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1239400Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1473,85): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1241804Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\dllmain.cpp(1528,63): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1242590Z 
+2026-10-14T16:31:32.1242595Z 
+2026-10-14T16:31:32.1242864Z        "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm.sln" (default target) (1) ->
+2026-10-14T16:31:32.1243518Z        "D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj" (default target) (2) ->
+2026-10-14T16:31:32.1243991Z        (ClCompile target) -> 
+2026-10-14T16:31:32.1244824Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,33): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1246097Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,33): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1247404Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,17): error C2737: 'cutoffNits': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1248760Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1250035Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1251303Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,24): error C2737: 'sy': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1252619Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1253869Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1255258Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,24): error C2737: 'sx': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1256582Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1257827Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1259097Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,21): error C2737: 'yNits': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1260443Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,50): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1261767Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,76): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1263030Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,21): error C2737: 'alpha': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1264346Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,39): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1265707Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,19): error C2672: 'std::clamp': no matching overloaded function found [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1267073Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,64): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1268319Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,64): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1269496Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,83): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1270725Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,33): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1271952Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,33): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1273239Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(50,17): error C2737: 'cutoffNits': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1274571Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1276270Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1277549Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(70,24): error C2737: 'sy': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1278872Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1280108Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1281361Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(71,24): error C2737: 'sx': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1282828Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,32): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1284068Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,32): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1285337Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(74,21): error C2737: 'yNits': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1287868Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,50): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1289316Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,76): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1290619Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(93,21): error C2737: 'alpha': const object must be initialized [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1291959Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,39): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1293333Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,19): error C2672: 'std::clamp': no matching overloaded function found [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1294696Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,64): error C2589: '(': illegal token on right side of '::' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1295944Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,64): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1297121Z          D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\AplEstimator.hpp(96,83): error C2059: syntax error: ')' [D:\a\TEST-apl-dynamic\TEST-apl-dynamic\DynamicAPL_25H2_v4\lutdwm\lutdwm.vcxproj]
+2026-10-14T16:31:32.1297969Z 
+2026-10-14T16:31:32.1298053Z     13 Warning(s)
+2026-10-14T16:31:32.1298258Z     40 Error(s)
+2026-10-14T16:31:32.1357416Z 
+2026-10-14T16:31:32.1357657Z Time Elapsed 00:00:23.65
+2026-10-14T16:31:32.1825740Z ##[error]Process completed with exit code 1.
