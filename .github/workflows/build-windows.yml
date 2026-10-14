@@ -1,0 +1,110 @@
+name: Build Windows package (Dynamic APL)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/build-windows.yml"
+      - "DynamicAPL_25H2_v4/**"
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: DynamicAPL_25H2_v4
+
+jobs:
+  build:
+    name: Release x64
+    runs-on: windows-2022
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Add MSBuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Add NuGet to PATH
+        uses: NuGet/setup-nuget@v2
+
+      - name: Verify project layout
+        shell: pwsh
+        run: |
+          foreach ($p in @('lutdwm.sln','DwmLutGUI/DwmLutGUI.sln','lutdwm/vcpkg.json','portable_tests/CMakeLists.txt')) {
+            if (!(Test-Path $p)) { throw "Missing file: $p" }
+          }
+
+      - name: Restore GUI packages
+        shell: pwsh
+        run: nuget restore DwmLutGUI/DwmLutGUI.sln -PackagesDirectory DwmLutGUI/packages
+
+      - name: Install native dependencies
+        shell: pwsh
+        run: |
+          & "$env:VCPKG_INSTALLATION_ROOT/vcpkg.exe" install `
+            --x-manifest-root="$env:GITHUB_WORKSPACE/DynamicAPL_25H2_v4/lutdwm" `
+            --triplet=x64-windows-static
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & "$env:VCPKG_INSTALLATION_ROOT/vcpkg.exe" integrate install
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Run portable C++ tests
+        shell: pwsh
+        run: |
+          cmake -S portable_tests -B build/portable-tests -A x64
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          cmake --build build/portable-tests --config Release --parallel
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ctest --test-dir build/portable-tests -C Release --output-on-failure
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Validate HLSL shaders
+        shell: pwsh
+        run: ./scripts/verify_hlsl_windows.ps1
+
+      - name: Build native DLL
+        shell: pwsh
+        run: |
+          msbuild lutdwm.sln /m `
+            /p:Configuration=Release `
+            /p:Platform=x64 `
+            /p:VcpkgRoot="$env:VCPKG_INSTALLATION_ROOT/" `
+            /p:OutDir="$env:GITHUB_WORKSPACE/DynamicAPL_25H2_v4/build/native/"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Build GUI
+        shell: pwsh
+        run: |
+          msbuild DwmLutGUI/DwmLutGUI.sln /m `
+            /p:Configuration=Release `
+            /p:Platform=x64 `
+            /p:OutDir="$env:GITHUB_WORKSPACE/DynamicAPL_25H2_v4/build/package/"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Assemble experimental test package
+        shell: pwsh
+        run: |
+          $package = "$env:GITHUB_WORKSPACE/DynamicAPL_25H2_v4/build/package"
+          $dist = "$env:GITHUB_WORKSPACE/DynamicAPL_25H2_v4/build/dist"
+          $dll = "$env:GITHUB_WORKSPACE/DynamicAPL_25H2_v4/build/native/dwm_lut.dll"
+          if (!(Test-Path "$package/DwmLutGUI.exe")) { throw "GUI executable missing" }
+          if (!(Test-Path $dll)) { throw "DLL missing" }
+          New-Item -ItemType Directory -Force $dist | Out-Null
+          Copy-Item "$package/DwmLutGUI.exe" $dist
+          Copy-Item "$package/DwmLutGUI.exe.config" $dist
+          Copy-Item "$package/WindowsDisplayAPI.dll" $dist
+          Copy-Item $dll $dist
+          Copy-Item examples/TEST-red-blue-swap.cube $dist
+          "EXPERIMENTAL BUILD. NOT VALIDATED IN DWM. Do not replace your working DLL." | Set-Content "$dist/README.txt" -Encoding UTF8
+          Compress-Archive -Path "$dist/*" -DestinationPath "$env:GITHUB_WORKSPACE/DynamicAPL_25H2_v4/build/dynamic-apl-EXPERIMENTAL-win-x64.zip" -Force
+
+      - name: Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: dynamic-apl-EXPERIMENTAL-win-x64
+          path: DynamicAPL_25H2_v4/build/dynamic-apl-EXPERIMENTAL-win-x64.zip
+          if-no-files-found: error
+          retention-days: 14
