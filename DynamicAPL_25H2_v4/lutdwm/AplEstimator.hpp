@@ -1,5 +1,6 @@
 #pragma once
 // Dual-LUT APL decision core (standard C++17, no Windows dependencies).
+// (std::min)/(std::max) intentionally bypass Windows min/max preprocessor macros.
 // For 2% vs 10% white-window calibration, these are SCENE statistics,
 // not knowledge of the physical Mini-LED backlight zones.
 #include <array>
@@ -47,7 +48,7 @@ inline FrameStats AnalyzeHistogram(const Histogram& hist) {
     out.p995NitsEstimate = LowerBinNits(percentileBin) * std::sqrt(2.0f);
     // Do not force the 2% profile for dark frames or SDR-only scenes.
     if(out.p995NitsEstimate < 5.0f) return out;
-    const float cutoffNits=std::max(4.0f, 0.20f*out.p995NitsEstimate);
+    const float cutoffNits=(std::max)(4.0f, 0.20f*out.p995NitsEstimate);
     double bright=0;
     for(unsigned b=0;b<kBins;b++) {
         float lo=LowerBinNits(b), hi=LowerBinNits(b+1);
@@ -67,11 +68,11 @@ inline Histogram MakeCpuReferenceHistogram(const float* rgba, unsigned width, un
     Histogram h{};
     if (!rgba||width==0||height==0||stridePixels==0) return h;
     for(unsigned y=0;y<kHeight;y++) for(unsigned x=0;x<kWidth;x++) {
-        const unsigned sy=std::min(height-1,static_cast<unsigned>((y+0.5f)*height/kHeight));
-        const unsigned sx=std::min(width-1,static_cast<unsigned>((x+0.5f)*width/kWidth));
+        const unsigned sy=(std::min)(height-1,static_cast<unsigned>((y+0.5f)*height/kHeight));
+        const unsigned sx=(std::min)(width-1,static_cast<unsigned>((x+0.5f)*width/kWidth));
         const float* p=rgba+(static_cast<size_t>(sy)*stridePixels*width+static_cast<size_t>(sx)*stridePixels);
         // scRGB reference 1.0 = 80 cd/m2, linear Rec.709 primaries.
-        const float yNits=std::max(0.0f,80.0f*(.2126f*p[0]+.7152f*p[1]+.0722f*p[2]));
+        const float yNits=(std::max)(0.0f,80.0f*(.2126f*p[0]+.7152f*p[1]+.0722f*p[2]));
         h[HistogramBin(yNits)]++;
     }
     return h;
@@ -90,10 +91,10 @@ struct Controller {
         dt=std::clamp(dt,0.001f,2.0f);
         // No trustworthy highlight means prefer conservative 10% reference.
         const float desired=s.valid ? 1.0f-SmoothStep(lowerCoverage,upperCoverage,s.brightFraction) : 0.0f;
-        const float alpha=1.0f-std::exp(-dt/std::max(smoothingSeconds,.01f));
+        const float alpha=1.0f-std::exp(-dt/(std::max)(smoothingSeconds,.01f));
         const float filtered=mix2+alpha*(desired-mix2);
         const float step=maxChangePerSecond*dt;
-        mix2=std::clamp(filtered,std::max(0.0f,mix2-step),std::min(1.0f,mix2+step));
+        mix2=std::clamp(filtered,(std::max)(0.0f,mix2-step),(std::min)(1.0f,mix2+step));
         return mix2;
     }
     void Reset(){mix2=0.0f;}
