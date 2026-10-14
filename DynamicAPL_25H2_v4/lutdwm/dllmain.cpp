@@ -421,12 +421,14 @@ float3 pq_inv_eotf(float3 y) {
 }
 
 float3 OrderedDither(float3 rgb, float2 pos) {
+	// Dithering operates on SDR RGB; keep all power-function inputs nonnegative.
+	rgb = saturate(rgb);
 	float3 low = floor(rgb * 255) / 255;
-	float3 high = low + 1.0 / 255;
+	float3 high = min(low + 1.0 / 255, 1.0);
 
-	float3 rgb_linear = pow(rgb,)" STRINGIFY(DITHER_GAMMA) R"();
-	float3 low_linear = pow(low,)" STRINGIFY(DITHER_GAMMA) R"();
-	float3 high_linear = pow(high,)" STRINGIFY(DITHER_GAMMA) R"();
+	float3 rgb_linear = pow(abs(rgb),)" STRINGIFY(DITHER_GAMMA) R"();
+	float3 low_linear = pow(abs(low),)" STRINGIFY(DITHER_GAMMA) R"();
+	float3 high_linear = pow(abs(high),)" STRINGIFY(DITHER_GAMMA) R"();
 
 	float noise = noiseTex.Sample(noiseSmp, pos / )" STRINGIFY(NOISE_SIZE) R"().x;
 	float3 threshold = lerp(low_linear, high_linear, noise);
